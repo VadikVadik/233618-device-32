@@ -9,47 +9,49 @@
 </head>
 <body>
   <header class="main-header">
-    <nav class="navigation">
-      <a class="navigation-logo" href="#">
-        <img class="header-logo" src="img/main-logo.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс">
-      </a>
-      <ul class="navigation-user">
-        <li class="navigation-user-item navigation-search">
-          <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="visually-hidden" for="cite-search">Поиск по сайту</label>
-            <input type="search" id="cite-search" name="q" placeholder="Поиск по сайту">
-            <button type="submit">Найти</button>
-          </form>
-        </li>
-        <li class="navigation-user-item">
-          <a class="navigation-user-link" href="#">Коля Петухов</a>
-        </li>
-        <li class="navigation-user-item">
-          <a class="navigation-user-link" href="#">Выйти</a>
-        </li>
-        <li class="navigation-user-item">
-          <a class="navigation-user-link" href="#">Сравнить</a>
-        </li>
-        <li class="navigation-user-item navigation-basket">
-          <span class="basket-count">2</span>
-          <a class="navigation-user-link basket-link" href="#">Корзина</a>
-        </li>
-      </ul>
-      <ul class="navigation-list">
-        <li class="navigation-list-item">
-          <a class="navigation-link" href="#">Каталог товаров</a>
-        </li>
-        <li class="navigation-list-item">
-          <a class="navigation-link" href="#">Доставка</a>
-        </li>
-        <li class="navigation-list-item">
-          <a class="navigation-link" href="#">Гарантия</a>
-        </li>
-        <li class="navigation-list-item">
-          <a class="navigation-link" href="#">Контакты</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="page-container">
+      <nav class="navigation">
+        <a class="navigation-logo" href="index.html">
+          <img class="header-logo" src="img/main-logo.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс">
+        </a>
+        <ul class="navigation-user">
+          <li class="navigation-user-item navigation-search">
+            <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+              <label class="visually-hidden" for="cite-search">Поиск по сайту</label>
+              <input type="search" id="cite-search" name="q" placeholder="Поиск по сайту">
+              <button type="submit">Найти</button>
+            </form>
+          </li>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">Коля Петухов</a>
+          </li>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">Выйти</a>
+          </li>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">Сравнить</a>
+          </li>
+          <li class="navigation-user-item navigation-basket">
+            <span class="basket-count">2</span>
+            <a class="navigation-user-link basket-link" href="#">Корзина</a>
+          </li>
+        </ul>
+        <ul class="navigation-list">
+          <li class="navigation-list-item">
+            <a class="navigation-link" href="#">Каталог товаров</a>
+          </li>
+          <li class="navigation-list-item">
+            <a class="navigation-link" href="#">Доставка</a>
+          </li>
+          <li class="navigation-list-item">
+            <a class="navigation-link" href="#">Гарантия</a>
+          </li>
+          <li class="navigation-list-item">
+            <a class="navigation-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="main-container main-inner">
     <div class="page-container">
@@ -226,7 +228,7 @@
     </div>
   </main>
   <footer class="footer">
-    <div class="footer-container">
+    <div class="page-container">
       <a class="footer-logo" href="#">
         <img class="footer-logo" src="img/footer-logo.svg" width="145" height="36"  alt="Логотип интернет-магазина Девайс">
       </a>

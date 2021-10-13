@@ -7,44 +7,46 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="navigation">
-        <a class="navigation-logo" href="#">
-          <img class="header-logo" src="img/main-logo.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс">
-        </a>
-        <ul class="navigation-user">
-          <li class="navigation-user-item navigation-search">
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-              <label class="visually-hidden" for="cite-search">Поиск по сайту</label>
-              <input type="search" id="cite-search" name="q" placeholder="Поиск по сайту">
-              <button type="submit">Найти</button>
-            </form>
-          </li>
-          <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">Войти</a>
-          </li>
-          <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">Сравнить</a>
-          </li>
-          <li class="navigation-user-item navigation-basket">
-            <span class="basket-count">2</span>
-            <a class="navigation-user-link basket-link" href="#">Корзина</a>
-          </li>
-        </ul>
-        <ul class="navigation-list">
-          <li class="navigation-list-item">
-            <a class="navigation-link" href="#">Каталог товаров</a>
-          </li>
-          <li class="navigation-list-item">
-            <a class="navigation-link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-list-item">
-            <a class="navigation-link" href="#">Гарантия</a>
-          </li>
-          <li class="navigation-list-item">
-            <a class="navigation-link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="page-container">
+        <nav class="navigation">
+          <a class="navigation-logo" href="#">
+            <img class="header-logo" src="img/main-logo.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс">
+          </a>
+          <ul class="navigation-user">
+            <li class="navigation-user-item navigation-search">
+              <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+                <label class="visually-hidden" for="cite-search">Поиск по сайту</label>
+                <input type="search" id="cite-search" name="q" placeholder="Поиск по сайту">
+                <button type="submit">Найти</button>
+              </form>
+            </li>
+            <li class="navigation-user-item">
+              <a class="navigation-user-link" href="#">Войти</a>
+            </li>
+            <li class="navigation-user-item">
+              <a class="navigation-user-link" href="#">Сравнить</a>
+            </li>
+            <li class="navigation-user-item navigation-basket">
+              <span class="basket-count">2</span>
+              <a class="navigation-user-link basket-link" href="#">Корзина</a>
+            </li>
+          </ul>
+          <ul class="navigation-list">
+            <li class="navigation-list-item">
+              <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="navigation-list-item">
+              <a class="navigation-link" href="#">Доставка</a>
+            </li>
+            <li class="navigation-list-item">
+              <a class="navigation-link" href="#">Гарантия</a>
+            </li>
+            <li class="navigation-list-item">
+              <a class="navigation-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="main-container main-index">
       <div class="page-container">
@@ -214,11 +216,13 @@
         </section>
         <section class="delivery">
           <h2 class="visually-hidden">Заказ доставки товара</h2>
-          <button class="delivery-button" type="button">
-            <span class="delivery-icon"></span>
-            Доставим редкий товар под заказ
-            <span class="delivery-i">i</span>
-          </button>
+          <div class="delivery-button">
+            <div class="delivery-icon"></div>
+            <div class="delivery-content">
+              <p class="delivery-text">Доставим редкий товар под заказ</p>
+              <a href="#" class="delivery-i">i</a>
+            </div>
+          </div>
         </section>
         <section class="about-company">
           <h2 class="visually-hidden">О компании</h2>
@@ -264,7 +268,7 @@
       </div>
     </main>
     <footer class="footer">
-      <div class="footer-container">
+      <div class="page-container">
         <a class="footer-logo" href="#">
           <img class="footer-logo" src="img/footer-logo.svg" width="145" height="36"  alt="Логотип интернет-магазина Девайс">
         </a>
