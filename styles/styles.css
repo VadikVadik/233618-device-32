@@ -54,13 +54,20 @@ a {
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .button {
@@ -103,8 +110,46 @@ ul {
 }
 
 .navigation-user {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 35px 0 29px;
   font-size: 16px;
   line-height: 19px;
+}
+
+.navigation-user-item {
+  padding-left: 25px;
+}
+
+.navigation-user-item:nth-child(3) {
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.navigation-search {
+  margin-right: auto;
+  padding-left: 0;
+}
+
+.search-input {
+  width: 300px;
+  background: none;
+  border: none;
+  margin-left: 36px;
+}
+
+.search-input::placeholder {
+  font-family: "Rubik", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: black;
+  opacity: 0.3;
+}
+
+.logout {
+  visibility: hidden;
 }
 
 .navigation-logo {
@@ -125,12 +170,69 @@ ul {
   text-transform: uppercase;
 }
 
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.navigation-list-main {
+  padding-bottom: 150px;
+}
+
+.navigation-list-inner {
+  padding-bottom: 40px;
+}
+
+.inner-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  width: 500px;
+}
+
+.navigation-list-item:nth-child(3n) {
+  max-width: 200px;
+  margin-left: auto;
+}
+
+.navigation-link {
+  display: block;
+  padding: 15px 0;
+  margin-right: 20px;
+}
+
+.navigation-list-item:nth-child(3n) .navigation-link {
+  margin-right: 0;
+}
+
+.catalog-link {
+  padding-right: 70px;
+  margin-right: 0;
+}
+
 /* Header end */
 /* Main page start */
 
 .slide {
   display: flex;
   justify-content: space-between;
+}
+
+.slide-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.slide-content {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.slide-link {
+  display: block;
+  width: 220px;
+  margin-bottom: 70px;
 }
 
 .slide-gallery {
@@ -149,20 +251,67 @@ ul {
   color: #fff;
 }
 
-.features-value b {
+.slide-features {
+  display: flex;
+}
+
+.slide-feature {
+  margin-right: 40px;
+}
+
+.feature-value b {
   font-weight: 400;
   font-size: 36px;
   line-height: 30px;
   color: black;
 }
 
-.features-title {
+.feature-value {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.feature-title {
   font-size: 16px;
+  margin: 0;
+}
+
+.slider-pagination {
+  list-style-type: none;
+  display: flex;
+}
+
+.slider-pagination-item {
+  margin-right: 22px;
+}
+
+.slider-pagination-item:last-child {
+  margin-right: 0;
+}
+
+.pagination-button {
+  display: block;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 0;
+  background-color: white;
+}
+
+.pagination-current {
+  background-color: black;
+}
+
+.categories {
+  margin-bottom: 70px;
 }
 
 .categories-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .categories-list-item {
@@ -216,6 +365,7 @@ ul {
 .services {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 90px;
 }
 
 .services-pagination {
@@ -226,8 +376,18 @@ ul {
   width: 760px;
 }
 
+.services-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
 .services-content {
   width: 500px;
+  margin: 0;
+}
+
+.delivery {
+  margin-bottom: 100px;
 }
 
 .delivery-button {
@@ -266,26 +426,52 @@ ul {
 .about-company {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 90px;
 }
 
 .about-company-item {
   width: 560px;
 }
 
+.about-company-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.about-company-content {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
 .carriers-list {
   font-weight: bold;
   line-height: 20px;
   color: black;
+  padding-top: 35px;
+  margin-bottom: 50px;
+}
+.carrier {
+  margin-bottom: 20px;
 }
 
 .about-company-subtitle {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .about-company-contacts, .footer-contacts {
   font-style: normal;
+}
+
+.about-company-contacts {
+  margin-bottom: 30px;
+}
+
+.address {
+  margin: 0;
 }
 
 .phone {
@@ -293,18 +479,72 @@ ul {
   text-decoration: underline;
 }
 
+.about-company-schedule {
+  margin-bottom: 45px;
+}
+
+.subscribe {
+  padding-top: 75px;
+  padding-bottom: 130px;
+}
+
 .subscribe-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .subscribe-title, .subscribe-content {
   width: 560px;
 }
 
+.subscribe-title {
+  margin: 0;
+}
+
+.subscribe-content {
+  margin: 0;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-input {
+  width: 600px;
+  height: 55px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-input::placeholder {
+  font-family: "Rubik", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  opacity: 0.5;
+}
+
 .subscribe-button {
+  width: 260px;
+  height: 55px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   background: none;
   border: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+.free-note {
+  margin-left: auto;
 }
 
 /* Main page end */
@@ -313,32 +553,34 @@ ul {
 .footer {
   background-color: #444444;
   color: #FFF;
+  padding-top: 60px;
 }
 
 .footer-logo {
   display: block;
   width: 145px;
+  margin-bottom: 35px;
 }
 
 .footer-contacts {
-  display: flex;
-  justify-content: space-between;
   font-size: 16px;
 }
 
 .footer-address {
+  margin: 0;
   width: 260px;
   line-height: 19px;
 }
 
 .footer-phone {
+  margin: 0;
   width: 260px;
   text-align: right;
 }
 
 .footer-navigation {
   display: flex;
-  width: 660px;
+  flex-wrap: wrap;
   margin: 0 auto;
   justify-content: center;
 }
@@ -352,14 +594,47 @@ ul {
   color: #FFF;
 }
 
+.footer-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.decor-line {
+  width: 80px;
+  height: 7px;
+  background-color: #FFC700;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .social-links-item {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  margin-right: 15px;
+}
+
+.social-links-item:last-child {
+  margin-right: 0;
 }
 
 /* Footer end */
 /* Catalog start */
+
+.main-inner {
+  padding-top: 40px;
+}
+
+.inner-header-title {
+  margin-top: 0;
+  margin-left: 60px;
+  margin-bottom: 15px;
+}
 
 .catalog-products {
   display: flex;
@@ -367,8 +642,19 @@ ul {
 }
 
 .breadcrumbs {
+  display: flex;
+  margin-left: 60px;
+  margin-bottom: 50px;
   font-size: 16px;
   line-height: 19px;
+}
+
+.breadcrumbs-item {
+  margin-right: 35px;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0px;
 }
 
 .products-filter {
@@ -378,6 +664,8 @@ ul {
 }
 
 .filter-title {
+  margin-top: 0;
+  padding: 25px 0;
   background-color: #DCDCDC;
 }
 
@@ -406,6 +694,15 @@ ul {
   letter-spacing: -0.02em;
 }
 
+.sorting-type {
+  display: flex;
+  padding: 25px 0;
+}
+
+.sorting-title {
+  margin-right: 50px;
+}
+
 .select-control {
   font-size: 16px;
   line-height: 19px;
@@ -416,6 +713,7 @@ ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 45px;
 }
 
 .product-card {
@@ -440,6 +738,20 @@ ul {
   height: 55px;
   border: 3px solid rgba(0, 0, 0, 0.1);
   background: none;
+  margin-bottom: 50px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  margin-bottom: 80px;
+  background-color: #EBEBEB;
+}
+
+.pagination-group {
+  display: flex;
 }
 
 .pagination-link {
@@ -447,9 +759,24 @@ ul {
   opacity: 0.3;
 }
 
+.pagination-group .pagination-link {
+  padding: 15px;
+}
+
 .pagination-prev, .pagination-next {
+  display: block;
+  width: 80px;
+  padding: 25px 0;
   color: black;
   opacity: 1;
+}
+
+.pagination-prev {
+  margin-left: auto;
+}
+
+.pagination-next {
+  margin-right: auto;
 }
 
 /* Catalog end */

@@ -18,36 +18,44 @@
           <li class="navigation-user-item navigation-search">
             <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
               <label class="visually-hidden" for="cite-search">Поиск по сайту</label>
-              <input type="search" id="cite-search" name="q" placeholder="Поиск по сайту">
-              <button type="submit">Найти</button>
+              <input class="search-input" type="search" id="cite-search" name="q" placeholder="Поиск по сайту">
+                <button class="visually-hidden" type="submit">Найти</button>
             </form>
           </li>
-          <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">Коля Петухов</a>
-          </li>
-          <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">Выйти</a>
-          </li>
-          <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">Сравнить</a>
-          </li>
-          <li class="navigation-user-item navigation-basket">
-            <span class="basket-count">2</span>
-            <a class="navigation-user-link basket-link" href="#">Корзина</a>
-          </li>
+          <li></li>
+            <ul class="inner-navigation">
+              <li class="navigation-user-item">
+                <a class="navigation-user-link" href="#">Коля Петухов</a>
+              </li>
+              <li class="navigation-user-item">
+                <a class="navigation-user-link" href="#">Выйти</a>
+              </li>
+              <li class="navigation-user-item">
+                <a class="navigation-user-link" href="#">Сравнить</a>
+              </li>
+              <li class="navigation-user-item navigation-basket">
+                <span class="basket-count">2</span>
+                <a class="navigation-user-link basket-link" href="#">Корзина</a>
+              </li>
+            </ul>
+        </li>
         </ul>
-        <ul class="navigation-list">
+        <ul class="navigation-list navigation-list-inner">
           <li class="navigation-list-item">
-            <a class="navigation-link" href="#">Каталог товаров</a>
+            <a class="navigation-link catalog-link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navigation-list-item">
-            <a class="navigation-link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-list-item">
-            <a class="navigation-link" href="#">Гарантия</a>
-          </li>
-          <li class="navigation-list-item">
-            <a class="navigation-link" href="#">Контакты</a>
+          <li>
+            <ul class="inner-navigation">
+              <li class="navigation-list-item">
+                <a class="navigation-link" href="#">Доставка</a>
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-link" href="#">Гарантия</a>
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-link" href="#">Контакты</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -203,19 +211,23 @@
               </a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link">...</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">15</a>
+              <ul class="pagination-group">
+                <li class="pagination-item">
+                  <a class="pagination-link" href="#">1</a>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link" href="#">2</a>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link" href="#">3</a>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link">...</a>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link" href="#">15</a>
+                </li>
+              </ul>
             </li>
             <li class="pagination-item">
               <a class="pagination-link pagination-next" href="#">
@@ -232,35 +244,42 @@
       <a class="footer-logo" href="#">
         <img class="footer-logo" src="img/footer-logo.svg" width="145" height="36"  alt="Логотип интернет-магазина Девайс">
       </a>
-      <address class="footer-contacts">
-        <p class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-        <p class="footer-phone"><a class="phone" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a></p>
-      </address>
-      <ul class="footer-navigation">
-        <li class="footer-navigation-item">
-          <a class="footer-link" href="#">Доставка</a>
-        </li>
-        <li class="footer-navigation-item">
-          <a class="footer-link" href="#">Гарантия</a>
-        </li>
-        <li class="footer-navigation-item">
-          <a class="footer-link" href="#">Контакты</a>
-        </li>
-      </ul>
-      <ul class="social-links">
-        <li class="social-links-item">
-          <a class="social-link" href="https://www.facebook.com/htmlacademy"><img src="img/icons/facebook-icon.svg" width="40" height="40" alt="Фейсбук"></a>
-        </li>
-        <li class="social-links-item">
-          <a class="social-link" href="https://www.instagram.com/htmlacademy"><img src="img/icons/instagram-icon.svg" width="40" height="40" alt="Инстаграм"></a>
-        </li>
-        <li class="social-links-item">
-          <a class="social-link" href="https://twitter.com/htmlacademy_ru"><img src="img/icons/twitter-icon.svg" width="40" height="40" alt="Твиттер"></a>
-        </li>
-      </ul>
-      <a class="ha-logo" href="https://htmlacademy.ru/">
-        <img class="ha-logo-image" src="img/htmlacademy-logo.svg" width="115" height="34" alt="Логотип HTML Academy">
-      </a>
+      <div class="footer-group">
+        <address class="footer-contacts">
+          <p class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+        </address>
+        <ul class="footer-navigation">
+          <li class="footer-navigation-item">
+            <a class="footer-link" href="#">Доставка</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a class="footer-link" href="#">Гарантия</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a class="footer-link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <address class="footer-contacts">
+          <p class="footer-phone"><a class="phone" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a></p>
+        </address>
+      </div>
+      <div class="footer-group">
+        <div class="decor-line"></div>
+        <ul class="social-links">
+          <li class="social-links-item">
+            <a class="social-link" href="https://www.facebook.com/htmlacademy"><img src="img/icons/facebook-icon.svg" width="40" height="40" alt="Фейсбук"></a>
+          </li>
+          <li class="social-links-item">
+            <a class="social-link" href="https://www.instagram.com/htmlacademy"><img src="img/icons/instagram-icon.svg" width="40" height="40" alt="Инстаграм"></a>
+          </li>
+          <li class="social-links-item">
+            <a class="social-link" href="https://twitter.com/htmlacademy_ru"><img src="img/icons/twitter-icon.svg" width="40" height="40" alt="Твиттер"></a>
+          </li>
+        </ul>
+        <a class="ha-logo" href="https://htmlacademy.ru/">
+          <img class="ha-logo-image" src="img/htmlacademy-logo.svg" width="115" height="34" alt="Логотип HTML Academy">
+        </a>
+      </div>
     </div>
   </footer>
 </body>
