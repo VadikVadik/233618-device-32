@@ -102,6 +102,10 @@ ul {
 
 /* Header start */
 
+.main-header {
+  padding-top: 40px;
+}
+
 .navigation {
   display: flex;
   flex-direction: column;
@@ -362,7 +366,7 @@ ul {
   background-color: #F0F0F0;
 }
 
-.services {
+.services-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 90px;
@@ -370,9 +374,32 @@ ul {
 
 .services-pagination {
   width: 290px;
+  border-right: 7px solid black;
 }
 
-.services-container {
+.services-pagination-item {
+  width: 100%;
+  text-align: start;
+  padding: 10px 0;
+}
+
+.services-button {
+  width: 160px;
+  text-align: center;
+  padding: 0;
+}
+
+.services-pagination-current {
+  background-color: black;
+  color: #FFE17F;
+}
+
+.services-pagination-current .button {
+  background-color: black;
+  color: #FFE17F;
+}
+
+.services-items {
   width: 760px;
 }
 
@@ -392,7 +419,7 @@ ul {
 
 .delivery-button {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   height: 100px;
   font-family: "Raleway", Helvetica, sans-serif;
@@ -415,12 +442,19 @@ ul {
   background-position: center;
 }
 
-.delivery-text {
-  padding-left: 195px;
+.delivery-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .delivery-i {
   display: block;
+  margin-right: 33px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url("../img/icons/info-icon.svg");
 }
 
 .about-company {

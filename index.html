@@ -12,50 +12,46 @@
           <a class="navigation-logo" href="#">
             <img class="header-logo" src="img/main-logo.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс">
           </a>
-          <ul class="navigation-user">
-            <li class="navigation-user-item navigation-search">
+          <div class="navigation-user">
+            <div class="navigation-user-item navigation-search">
               <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
                 <label class="visually-hidden" for="cite-search">Поиск по сайту</label>
                 <input class="search-input" type="search" id="cite-search" name="q" placeholder="Поиск по сайту">
                 <button class="visually-hidden" type="submit">Найти</button>
               </form>
-            </li>
-            <li></li>
-              <ul class="inner-navigation">
-                <li class="navigation-user-item">
-                  <a class="navigation-user-link" href="#">Войти</a>
-                </li>
-                <li class="navigation-user-item logout">
-                  <a class="navigation-user-link" href="#">Выйти</a>
-                </li>
-                <li class="navigation-user-item">
-                  <a class="navigation-user-link" href="#">Сравнить</a>
-                </li>
-                <li class="navigation-user-item navigation-basket">
-                  <span class="basket-count">2</span>
-                  <a class="navigation-user-link basket-link" href="#">Корзина</a>
-                </li>
-              </ul>
-          </li>
-          </ul>
-          <ul class="navigation-list navigation-list-main">
-            <li class="navigation-list-item">
+            </div>
+            <ul class="inner-navigation">
+              <li class="navigation-user-item">
+                <a class="navigation-user-link" href="#">Войти</a>
+              </li>
+              <li class="navigation-user-item logout">
+                <a class="navigation-user-link" href="#">Выйти</a>
+              </li>
+              <li class="navigation-user-item">
+                <a class="navigation-user-link" href="#">Сравнить</a>
+              </li>
+              <li class="navigation-user-item navigation-basket">
+                <span class="basket-count">2</span>
+                <a class="navigation-user-link basket-link" href="#">Корзина</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navigation-list navigation-list-main">
+            <div class="navigation-list-item">
               <a class="navigation-link catalog-link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li>
-              <ul class="inner-navigation">
-                <li class="navigation-list-item">
-                  <a class="navigation-link" href="#">Доставка</a>
-                </li>
-                <li class="navigation-list-item">
-                  <a class="navigation-link" href="#">Гарантия</a>
-                </li>
-                <li class="navigation-list-item">
-                  <a class="navigation-link" href="#">Контакты</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+            </div>
+            <ul class="inner-navigation">
+              <li class="navigation-list-item">
+                <a class="navigation-link" href="#">Доставка</a>
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-link" href="#">Гарантия</a>
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -91,7 +87,7 @@
               </div>
             </div>
           </section>
-          <section class="slide">
+          <section class="slide visually-hidden">
             <div class="slide-gallery">
               <img class="slide-image" src="img/slider-img/slider-2.png" width="560" height="560" alt="Мотивирующий фитнесс браслет">
               <button class="slide-button gallery-prev" type="button">
@@ -114,7 +110,7 @@
               </div>
             </div>
           </section>
-          <section class="slide">
+          <section class="slide visually-hidden">
             <div class="slide-gallery">
               <img class="slide-image" src="img/slider-img/slider-3.png" width="560" height="560" alt="Восьмиметровая палка для селфи">
               <button class="slide-button gallery-prev" type="button">
@@ -198,41 +194,43 @@
             </li>
           </ul>
         </section>
+      </div>
         <section class="services">
+      <div class="page-container services-container">
           <ul class="services-pagination">
-            <li class="services-pagination-item">
+            <li class="services-pagination-item services-pagination-current">
               <button class="services-button button services-current" type="button">Доставка</button>
             </li>
             <li class="services-pagination-item">
-              <button class="services-button button services-current" type="button">Гарантия</button>
+              <button class="services-button button" type="button">Гарантия</button>
             </li>
             <li class="services-pagination-item">
-              <button class="services-button button services-current" type="button">Кредит</button>
+              <button class="services-button button" type="button">Кредит</button>
             </li>
           </ul>
-          <div class="services-container">
+          <div class="services-items">
             <div class="services-item">
               <h2 class="section-title services-title">Доставка</h2>
               <p class="services-content">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
-            <div class="services-item">
+            <div class="services-item visually-hidden">
               <h2 class="section-title services-title">Гарантия</h2>
               <p class="services-content">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
             </div>
-            <div class="services-item">
+            <div class="services-item visually-hidden">
               <h2 class="section-title services-title">Кредит</h2>
               <p class="services-content">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
             </div>
           </div>
+      </div>
         </section>
+      <div class="page-container">
         <section class="delivery">
           <h2 class="visually-hidden">Заказ доставки товара</h2>
           <div class="delivery-button">
             <div class="delivery-icon"></div>
-            <div class="delivery-content">
-              <p class="delivery-text">Доставим редкий товар под заказ</p>
-              <a href="#" class="delivery-i">i</a>
-            </div>
+            <p class="delivery-text">Доставим редкий товар под заказ</p>
+            <a href="#" class="delivery-i"></a>
           </div>
         </section>
         <section class="about-company">
@@ -264,7 +262,9 @@
             <a class="about-company-link button" href="#">Напишите нам</a>
           </section>
         </section>
+      </div>
         <section class="subscribe">
+      <div class="page-container">
           <div class="subscribe-container">
             <h2 class="section-title subscribe-title">Подпишитесь на рассылку</h2>
             <p class="subscribe-content">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
@@ -275,8 +275,8 @@
             <button class="subscribe-button button" type="submit">Подписаться</button>
             <span class="free-note">Это бесплатно</span>
           </form>
-        </section>
       </div>
+        </section>
     </main>
     <footer class="footer">
       <div class="page-container">
