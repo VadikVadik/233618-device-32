@@ -313,9 +313,9 @@ ul {
 }
 
 .categories-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
+  gap: 40px;
 }
 
 .categories-list-item {
@@ -629,9 +629,10 @@ ul {
 }
 
 .footer-group {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 260px 640px 260px;
   align-items: center;
+  row-gap: 60px;
   margin-bottom: 60px;
 }
 
@@ -642,6 +643,7 @@ ul {
 }
 
 .social-links {
+  justify-self: center;
   display: flex;
   flex-wrap: wrap;
 }
@@ -655,6 +657,14 @@ ul {
 
 .social-links-item:last-child {
   margin-right: 0;
+}
+
+.ha-logo, .ha-logo-image {
+  display: block;
+}
+
+.ha-logo {
+  justify-self: end;
 }
 
 /* Footer end */
@@ -703,6 +713,15 @@ ul {
   background-color: #DCDCDC;
 }
 
+.filter-fieldset {
+  border: none;
+}
+
+.filter-group {
+  border-top: 2px solid black;
+  padding-top: 12px;
+}
+
 .control-label {
   font-size: 16px;
   line-height: 19px;
@@ -744,17 +763,24 @@ ul {
 }
 
 .product-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 360px 360px;
+  gap: 40px;
   margin-bottom: 45px;
 }
 
 .product-card {
-  width: 360px;
+  display: grid;
+  grid-template-columns: 280px 80px;
+  grid-template-rows: 380px auto;
+  row-gap: 35px;
 }
 
 .card-title {
+  grid-column: 1 / 2;
+  align-self: start;
+  margin: 0;
+  padding: 0;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -762,9 +788,46 @@ ul {
 }
 
 .card-price {
+  display: block;
+  align-self: start;
+  grid-column: 2 / 3;
   line-height: 21px;
   color: #444444;
   text-align: right;
+}
+
+.card-link {
+  display: grid;
+  grid-template-columns: 360px;
+  grid-template-rows: 380px;
+  grid-column: 1 / -1;
+}
+
+.card-image {
+  object-fit: cover;
+}
+
+.card-image, .card-button {
+  display: block;
+  padding: 0;
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+}
+
+.card-button {
+  width: 180px;
+  align-self: center;
+  justify-self: center;
+  opacity: 0;
+  z-index: 1;
+}
+
+.card-link:hover .card-button {
+  opacity: 1;
+}
+
+.card-link:hover .card-image {
+  opacity: 0.8;
 }
 
 .more-products {
