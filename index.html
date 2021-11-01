@@ -32,6 +32,32 @@
               </li>
               <li class="navigation-user-item navigation-basket">
                 <a class="navigation-user-link basket-link" href="#"><span class="basket-count">2</span>Корзина</a>
+                <div class="popover popover-basket">
+                  <div class="popover-basket-content">
+                    <h2 class="visually-hidden">Корзина</h2>
+                    <ul class="basket-items">
+                      <li class="basket-item">
+                        <a class="product-link" href="#">
+                          <img src="img/catalog-img/product-1-preview.jpg" width="41" height="43" alt="Любительская селфи-палка">
+                          <span>Любительская селфи-палка</span>
+                        </a>
+                        <a class="delete-btn" href="#"></a>
+                      </li>
+                      <li class="basket-item">
+                        <a class="product-link" href="#">
+                          <img src="img/catalog-img/product-2-preview.jpg" width="41" height="43" alt="Профессиональная селфи-палка">
+                          <span>Профессиональная селфи-палка</span>
+                        </a>
+                        <a class="delete-btn" href="#"></a>
+                      </li>
+                    </ul>
+                    <div class="basket-description">
+                      <span>Товаров: 2</span>
+                      <span>Сумма: 2000 ₽</span>
+                    </div>
+                    <div class="open-basket-wrapper"><a class="open-basket-btn" href="#"><span>Открыть корзину</span></a></div>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -41,6 +67,28 @@
                 <span class="catalog-link-title">Каталог товаров</span>
                 <span class="catalog-link-button"></span>
               </a>
+              <div class="dropdown-container">
+                <ul class="catalog-dropdown">
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#">Фитнесс-браслеты</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#">Квадрокоптеры</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#">Моноподы для селфи</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#">Умные часы</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#">Экшн-камеры</a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <ul class="inner-navigation">
               <li class="navigation-list-item">
@@ -234,42 +282,6 @@
             <p class="delivery-text">Доставим редкий товар под заказ</p>
             <span class="delivery-i"></span>
           </a>
-          <div class="order-container visually-hidden">
-            <div class="order-header">
-              <p class="order-title section-title">Доставка под заказ</p>
-              <button class="order-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-            </div>
-            <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
-              <div class="field-group delivery-form-name">
-                <label class="form-label" for="delivery-name">Ваше имя:</label>
-                <input type="text" id="delivery-name" name="delivery-name" placeholder="Имя Фамилия">
-                <p class="prompt prompt-error">Пожалуйста, представьтесь</p>
-              </div>
-              <div class="field-group delivery-form-email">
-                <label class="form-label" for="delivery-email">Ваш e-mail:</label>
-                <input type="email" id="delivery-email" name="delivery-email" placeholder="e-mail">
-                <p class="prompt">Забавный у вас адрес</p>
-              </div>
-              <div class="field-group delivery-form-text">
-                <label class="form-label" for="delivery-text">Что нужно привезти:</label>
-                <input type="text" id="delivery-text" name="delivery-text" placeholder="В свободной форме">
-              </div>
-              <div class="field-group delivery-form-amount">
-                <label class="form-label" for="delivery-amount">
-                  Количество:
-                  <button class="info" type="button">
-                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                  </button>
-                </label>
-                <p class="amount-group">
-                  <span class="amount-minus"></span>
-                  <input type="text" id="delivery-amount" name="delivery-amount">
-                  <span class="amount-plus"></span>
-                </p>
-              </div>
-              <button class="button delivery-submit" type="submit">Отправить</button>
-            </form>
-          </div>
         </section>
         <section class="about-company">
           <h2 class="visually-hidden">О компании</h2>
@@ -379,5 +391,44 @@
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <div class="order-container">
+        <div class="order-header">
+          <p class="order-title section-title">Доставка под заказ</p>
+          <button class="order-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+        </div>
+        <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="field-group delivery-form-name">
+            <label class="form-label" for="delivery-name">Ваше имя:</label>
+            <input type="text" id="delivery-name" name="delivery-name" placeholder="Имя Фамилия">
+            <p class="prompt prompt-error">Пожалуйста, представьтесь</p>
+          </div>
+          <div class="field-group delivery-form-email">
+            <label class="form-label" for="delivery-email">Ваш e-mail:</label>
+            <input type="email" id="delivery-email" name="delivery-email" placeholder="e-mail" required>
+            <p class="prompt prompt-success">Забавный у вас адрес</p>
+          </div>
+          <div class="field-group delivery-form-text">
+            <label class="form-label" for="delivery-text">Что нужно привезти:</label>
+            <input type="text" id="delivery-text" name="delivery-text" placeholder="В свободной форме">
+          </div>
+          <div class="field-group delivery-form-amount">
+            <label class="form-label" for="delivery-amount">Количество:</label>
+            <div class="info">
+              <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+              <div class="popover popover-amount">
+                <p>Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</p>
+              </div>
+            </div>
+            <p class="amount-group">
+              <button class="amount-minus" type="button"></button>
+              <input type="number" id="delivery-amount" name="delivery-amount" placeholder="1">
+              <button class="amount-plus" type="button"></button>
+            </p>
+          </div>
+          <button class="button delivery-submit" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
