@@ -584,6 +584,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   position: relative;
 }
 
+.catalog-link-group:hover {
+  z-index: 1;
+}
+
+.catalog-link-group:hover .dropdown-container {
+  display: block;
+}
+
 .catalog-link {
   display: flex;
   align-items: center;
@@ -2116,6 +2124,10 @@ input[name="delivery-email"] {
 .control-input:focus + .control-mark {
   outline: none;
   border-color: #AF4FFF;
+}
+
+.control-input:focus ~ .control-label {
+  color: #AF4FFF;
 }
 
 .control-input:checked:focus + .control-mark svg {
