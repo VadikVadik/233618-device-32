@@ -30,6 +30,12 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -173,7 +179,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .search-input {
   margin-left: -16px;
-  box-sizing: border-box;
   width: 516px;
   padding: 8px 0;
   background: none;
@@ -183,11 +188,8 @@ input[type="search"]::-webkit-search-results-decoration {
   background-image: url("../img/icons/search-icon.svg");
   background-repeat: no-repeat;
   background-position: 16px center;
-  font-family: "Rubik", "Helvetica", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: inherit;
   font-size: 16px;
-  line-height: 19px;
 }
 
 .search-button {
@@ -200,21 +202,12 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 0;
   background: none;
   border: 2px solid #af4fff;
-  box-sizing: border-box;
   border-radius: 0 20px 20px 0;
-  font-family: "Rubik", "Helvetica", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: inherit;
   font-size: 16px;
-  line-height: 19px;
 }
 
 .search-input::placeholder {
-  font-family: "Rubik", "Helvetica", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
   color: #000000;
   opacity: 0.3;
 }
@@ -286,7 +279,6 @@ input[type="search"]::-webkit-search-results-decoration {
   background-repeat: no-repeat;
   background-position: 20px center;
   border: 2px solid transparent;
-  box-sizing: border-box;
   border-radius: 20px;
   text-decoration: none;
   color: #000000;
@@ -385,7 +377,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .basket-item {
   display: flex;
-  width: 280px;
+  width: 320px;
   padding: 20px;
 }
 
@@ -484,7 +476,6 @@ input[type="search"]::-webkit-search-results-decoration {
   padding: 15px 0;
   background-color: #ffffff;
   font-family: "Raleway", "Helvetica", sans-serif;
-  font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -581,7 +572,6 @@ input[type="search"]::-webkit-search-results-decoration {
   position: relative;
   padding: 14px 20px 15px 20px;
   border: 2px solid transparent;
-  box-sizing: border-box;
   border-radius: 25px;
 }
 
@@ -647,7 +637,6 @@ input[type="search"]::-webkit-search-results-decoration {
   padding: 14.5px 16px;
   margin-right: 0;
   border: 2px solid transparent;
-  box-sizing: border-box;
   border-radius: 25px;
 }
 
@@ -657,7 +646,6 @@ input[type="search"]::-webkit-search-results-decoration {
   padding: 0;
   border-radius: 50%;
   border: 2px solid #000000;
-  box-sizing: border-box;
   background-image: url("../img/icons/plus-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -669,13 +657,11 @@ input[type="search"]::-webkit-search-results-decoration {
   position: absolute;
   width: 1160px;
   padding: 20px 0 58px 45px;
-  box-sizing: border-box;
   background-color: #ffe17f;
   z-index: 1;
   left: -60px;
   top: 80px;
   font-family: "Rubik", "Helvetica", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -805,7 +791,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .slide-button:focus {
   outline: none;
   border: 2px solid #af4fff;
-  box-sizing: border-box;
   border-radius: 6px;
 }
 
@@ -837,7 +822,6 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 80px 50px 10px 0;
   font-weight: 800;
   font-size: 180px;
-  line-height: 30px;
   text-align: right;
   color: #ffffff;
 }
@@ -888,7 +872,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .pagination-button {
   cursor: pointer;
   display: block;
-  box-sizing: border-box;
   width: 12px;
   height: 12px;
   border: 2px solid #000000;
@@ -934,28 +917,26 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .categories-link {
   font-family: "Raleway", "Helvetica", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.05em;
   text-decoration: none;
   color: #000000;
 }
 
 .category {
+  display: flex;
   width: 160px;
   height: 160px;
   margin-bottom: 30px;
-  box-sizing: border-box;
   background-color: #ffe17f;
 }
 
-.category-icon {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
+.category svg {
+  margin: auto;
+}
+
+.category.monopod svg {
+  align-self: end;
+  margin: 0 auto;
 }
 
 .categories-link:hover .category,
@@ -982,33 +963,8 @@ input[type="search"]::-webkit-search-results-decoration {
   border: none;
 }
 
-.categories-link:active .category-icon {
+.categories-link:active .category svg {
   opacity: 0.3;
-}
-
-.vr {
-  background-image: url("../img/categories-img/category-vr.svg");
-}
-
-.monopod {
-  background-image: url("../img/categories-img/category-monopod.svg");
-  background-position: bottom;
-}
-
-.camera {
-  background-image: url("../img/categories-img/category-camera.svg");
-}
-
-.fitness {
-  background-image: url("../img/categories-img/category-fitness.svg");
-}
-
-.smart-watch {
-  background-image: url("../img/categories-img/category-smart-watch.svg");
-}
-
-.quadcopter {
-  background-image: url("../img/categories-img/category-quadcopter.svg");
 }
 
 .services,
@@ -1130,7 +1086,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 110px;
   font-family: "Raleway", "Helvetica", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -1157,6 +1113,11 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.delivery-text {
+  margin-left: -53px;
+  letter-spacing: 4px;
 }
 
 .delivery-i {
@@ -1209,7 +1170,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .order-container {
-  width: 760px;
+  width: 920px;
   margin: auto;
   background-color: #ffffff;
   border: 10px solid #000000;
@@ -1256,7 +1217,6 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .delivery-form {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
   display: grid;
@@ -1307,9 +1267,7 @@ input[type="search"]::-webkit-search-results-decoration {
   height: 160px;
   right: -37px;
   top: 40px;
-  box-sizing: border-box;
   font-family: "Rubik", "Helvetica", sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
@@ -1339,14 +1297,12 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .delivery-form input {
-  box-sizing: border-box;
   height: 60px;
   padding: 20px;
   margin: 0;
   border: none;
   background-color: #f0f0f0;
   font-family: "Rubik", "Helvetica", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -1416,7 +1372,6 @@ input[name="delivery-email"] {
 
 .amount-group input {
   width: 100%;
-  box-sizing: border-box;
   padding: 5px;
   text-align: center;
 }
@@ -1612,16 +1567,13 @@ input[name="delivery-email"] {
 .subscribe-input {
   width: 600px;
   height: 55px;
-  box-sizing: border-box;
   padding: 0;
   padding-left: 10px;
   margin: 0;
   background: none;
   border: none;
   border-bottom: 3px solid rgba(0, 0, 0, 0.1);
-  font-family: "Rubik", "Helvetica", sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  font-family: inherit;
   font-size: 18px;
   line-height: 30px;
   color: #444444;
@@ -1629,7 +1581,6 @@ input[name="delivery-email"] {
 
 .subscribe-input::placeholder {
   font-family: "Rubik", "Helvetica", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
@@ -1665,7 +1616,6 @@ input[name="delivery-email"] {
 .subscribe-button {
   width: 260px;
   min-height: 55px;
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
   background: none;
@@ -1735,7 +1685,6 @@ input[name="delivery-email"] {
   padding: 3px 15px 5px;
   margin-right: -15px;
   border: 2px solid transparent;
-  box-sizing: border-box;
   border-radius: 25px;
   text-decoration: none;
 }
@@ -1774,7 +1723,6 @@ input[name="delivery-email"] {
   padding: 14px 20px 15px 20px;
   display: block;
   border: 2px solid transparent;
-  box-sizing: border-box;
   border-radius: 25px;
   text-decoration: none;
 }
@@ -1845,8 +1793,8 @@ input[name="delivery-email"] {
 
 .social-link {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 5px solid #444444;
   background-color: rgba(255, 255, 255, 0.7);
@@ -1887,7 +1835,6 @@ input[name="delivery-email"] {
   padding: 10px;
   margin-right: -10px;
   border: 2px solid transparent;
-  box-sizing: border-box;
   border-radius: 10px;
 }
 
@@ -2016,7 +1963,7 @@ input[name="delivery-email"] {
 }
 
 .catalog-filter {
-  width: 200px;
+  width: 330px;
   padding: 70px 70px 0 60px;
   margin-left: auto;
 }
@@ -2076,7 +2023,6 @@ input[name="delivery-email"] {
   height: 18px;
   border: 2px solid #000000;
   border-radius: 50%;
-  box-sizing: border-box;
   background: #ebebeb;
   cursor: pointer;
 }
@@ -2167,7 +2113,6 @@ input[name="delivery-email"] {
   width: 20px;
   height: 20px;
   border: 2px solid #000000;
-  box-sizing: border-box;
   border-radius: 3px;
   background-repeat: no-repeat;
   background-position: center;
@@ -2270,10 +2215,9 @@ input[name="delivery-email"] {
   max-width: 300px;
   font-family: inherit;
   font-size: 16px;
-  line-height: 19px;
   border: none;
   background-color: #ebebeb;
-  margin-right: 338px;
+  margin-right: 333px;
 }
 
 .sorting-direction {
@@ -2331,7 +2275,6 @@ input[name="delivery-email"] {
   margin: 0;
   margin-left: 5px;
   padding: 0;
-  font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: -0.02em;
@@ -2350,7 +2293,6 @@ input[name="delivery-email"] {
 .card-image {
   object-fit: cover;
   border: 5px solid transparent;
-  box-sizing: border-box;
 }
 
 .card-image,
@@ -2448,7 +2390,7 @@ input[name="delivery-email"] {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-bottom: 70px;
+  margin-bottom: 75px;
   background-color: #ebebeb;
   list-style-type: none;
 }
@@ -2459,6 +2401,7 @@ input[name="delivery-email"] {
   flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
+  margin-left: 71px;
   padding: 0;
 }
 
@@ -2467,7 +2410,6 @@ input[name="delivery-email"] {
   max-width: 150px;
   color: #444444;
   border: 5px solid transparent;
-  box-sizing: border-box;
   text-decoration: none;
 }
 
@@ -2476,13 +2418,13 @@ input[name="delivery-email"] {
 }
 
 .pagination-group .pagination-link {
-  padding: 15px;
+  padding: 8px;
 }
 
 .pagination-prev,
 .pagination-next {
   display: block;
-  padding: 25px;
+  padding: 22px;
   color: #000000;
   opacity: 1;
   background-color: #f0f0f0;
