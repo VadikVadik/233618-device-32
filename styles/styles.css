@@ -963,7 +963,7 @@ input[type="search"]::-webkit-search-results-decoration {
   border: none;
 }
 
-.categories-link:active .category svg {
+.categories-link:active svg {
   opacity: 0.3;
 }
 
